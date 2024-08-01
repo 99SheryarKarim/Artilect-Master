@@ -81,14 +81,14 @@ function WorkMain() {
       <motion.div
         ref={ref}
         style={{ backgroundColor: "#FFFFFF", color: "#000000" }}
-        className="w-full lg:h-[55vh]  flex flex-col justify-center items-center transition-colors duration-500"
+        className="w-full lg:h-[55vh] flex flex-col justify-center items-center transition-colors duration-500"
       >
         <div className="relative flex items-center justify-center">
           <h2
             style={{ fontWeight: "400" }}
             className="text-[20vw] sm:text-[15vw] md:text-[125px] font-Skyhook text-center"
           >
-            <span className="font-bold font-suisse w-[24rem] mt-[6rem] mb-[-12rem] flex sm:hidden text-[8vw] ">
+            <span className="font-bold font-suisse w-[24rem] mt-[6rem] mb-[-12rem] flex sm:hidden text-[8vw]">
               OUR WORK
             </span>
             <span className="font-suisse text-gray-800 hidden sm:flex items-center mt-[120px]">
@@ -104,8 +104,8 @@ function WorkMain() {
         <br />
       </motion.div>
       <div className="px-6 w-full h-[50vh] sm:h-[45vh] md:h-[50vh] flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">
-        <div className="w-full md:w-[80%] h-full flex items-center justify-center ">
-          <p className=" sm:m-6 text-gray-800 md:m-10 font-semibold font-gray-400 font-suisse text-[6vw] sm:text-[5vw] md:text-[40px]  tracking-wide ">
+        <div className="w-full md:w-[80%] h-full flex items-center justify-center">
+          <p className="sm:m-6 text-gray-800 md:m-10 font-semibold font-gray-400 font-suisse text-[6vw] sm:text-[5vw] md:text-[40px] tracking-wide">
             We’re proud to partner with leading businesses to create impactful
             digital products that make their customers say wow.
           </p>
