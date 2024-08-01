@@ -81,9 +81,20 @@ const TestimonialSlider = () => {
   const clonedTestimonials = [...testimonials, ...testimonials, ...testimonials];
   const [index, setIndex] = useState(testimonials.length);
   const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    handleResize(); // Check screen size on initial render
+    window.addEventListener('resize', handleResize); // Add resize event listener
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+    };
   }, []);
 
   const handlePrev = () => {
@@ -152,7 +163,7 @@ const TestimonialSlider = () => {
             }}
           >
             {isClient && clonedTestimonials.length > 0 ? (
-              window.innerWidth <= 640
+              isMobile
                 ? clonedTestimonials.slice(index, index + 1).map((testimonial, i) => (
                     <TestimonialCard key={i} testimonial={testimonial} />
                   ))
@@ -165,22 +176,26 @@ const TestimonialSlider = () => {
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-        <button
-          onClick={handlePrev}
-          className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300"
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-      </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-        <button
-          onClick={handleNext}
-          className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300"
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-      </div>
+      {!isMobile && (
+        <>
+          <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
+            <button
+              onClick={handlePrev}
+              className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300"
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+          </div>
+          <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
+            <button
+              onClick={handleNext}
+              className="flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300"
+            >
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 };
@@ -188,7 +203,7 @@ const TestimonialSlider = () => {
 const Happy = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Clients Feedback</h1>
+      <h1 className="text-4xl font-bold font-suisse text-center mb-8 text-gray-800">Clients Feedback</h1>
       <TestimonialSlider />
     </div>
   );
