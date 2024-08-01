@@ -158,7 +158,7 @@ p {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #e0ff03;
+  background-color: #FF00FF;
   transition: left 0.3s ease;
   color: black;
 }

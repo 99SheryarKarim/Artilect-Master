@@ -3,7 +3,7 @@ import Accordian from "./accordian";
 
 const FAQsComponent = () => {
   return (
-    <div className=" bg-[#212121] text-white pb-40 w-full h-full">
+    <div className="text-[#FF00FF] bg-[#212121] text-white pb-40 w-full h-full">
       <div className="heading flex flex-col sm:text-center lg:text-center sm:text-[5vw]  sm:mr-0 lg:mr-[25%]  lg:text-[5.78vw]  pt-20 ">
         <p> FREQUENTLY </p>
         <p>ASKED QUESTIONS</p>

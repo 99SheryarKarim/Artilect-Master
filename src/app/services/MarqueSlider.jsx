@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 function MarqueeComponent() {
   return (
     <Marquee speed={150}>
-      <div className="flex">
+      <div className="flex text-[#FF00FF]">
         <div className="w-[400px] m-4 h-[20vh]  mr-2.5">
           <h2 className="text-5xl">AI Tools</h2>
         </div>

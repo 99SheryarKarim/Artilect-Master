@@ -98,7 +98,7 @@ const Form = () => {
           <div className="flex flex-col w-[100%]">
             <label htmlFor="email">Your e-mail</label>
             <input
-              className="label lg:p-[25px]  p-1 pl-3 rounded-[8px] sm:h-14 lg:h-10 sm:text-lg lg:text-[1.2vw] my-4"
+              className="label lg:p-[25px] p-4 p-1 pl-3 rounded-[8px] sm:h-14 lg:h-10 sm:text-lg lg:text-[1.2vw] my-4"
               type="email"
               name="email"
               id="email"
@@ -124,7 +124,7 @@ const Form = () => {
           <div className="flex flex-col">
             <label htmlFor="source">How did you hear of us?</label>
             <input
-              className="label lg:p-[25px] p-4 rounded-[5px] sm:h-14 lg:h-10 pl-3 sm:text-lg lg:text-[1.2vw] my-4"
+              className="label lg:p-[25px] p-4 rounded-[8px] sm:h-14 lg:h-10 pl-3 sm:text-lg lg:text-[1.2vw] my-4"
               type="text"
               name="source"
               id="source"

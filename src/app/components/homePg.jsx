@@ -97,7 +97,8 @@ const projects = [
 export default function Home() {
   return (
     <div className="w-full bg-white flex flex-col items-center justify-center">
-      <main className="flex flex-1 flex-col items-center justify-center text-left lg:text-center px-4 text-slate-900">
+     <div className="bg-[#212121] lg:h-[100vh]">
+     <main className="pt-[30px] flex flex-1 flex-col items-center justify-center text-left lg:text-center px-4 text-[#FF00FF]">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -123,12 +124,11 @@ export default function Home() {
           </motion.p>
         </motion.div>
       </main>
-
       <div className="flex flex-col lg:flex-row">
         <div className=" lg:ml-[-20px]">
           <div className="w-full flex flex-col md:flex-row justify-between items-center bg-burlywood px-4 pt-4 md:p-8">
             <motion.p
-              className="lg:pt-0 font-semibold font-skyhook text-lg text-gray-600 max-w-lg text-left lg:pl-11 md:text-left"
+              className="lg:pt-0 font-semibold font-skyhook text-lg text-[gray] max-w-lg text-left lg:pl-11 md:text-left"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2, delay: 1 }}
@@ -138,7 +138,7 @@ export default function Home() {
             </motion.p>
           </div>
           <div className="ml-[74px] cursor-pointer group">
-            <p className="relative hidden lg:text-[19px] text-gray-700 md:block after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-64 after:h-0.5 after:bg-black after:scale-x-100 after:origin-left after:transition-transform after:duration-500 group-hover:after:scale-x-0">
+            <p className="text-[gray] relative hidden lg:text-[19px] text-gray-700 md:block after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-64 after:h-0.5 after:bg-[gray] after:scale-x-100 after:origin-left after:transition-transform after:duration-500 group-hover:after:scale-x-0">
               Discover How We Can Help
             </p>
           </div>
@@ -146,7 +146,7 @@ export default function Home() {
 
         <div className="w-full flex flex-col items-center lg:items-end overflow-hidden">
           <div className="w-full lg:w-1/2 px-4 pt-11">
-            <p className="text-gray-700">Trusted by many:</p>
+            <p className="text-[gray]">Trusted by many:</p>
             <div className="w-full flex items-center">
               <Marquee className="marquee whitespace-nowrap pb-4 flex items-center">
                 <Image
@@ -196,6 +196,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+     </div>
 
       <div className="w-full flex flex-col items-center overflow-hidden bg-white py-16">
         <div className=" lg:h-[19rem]">

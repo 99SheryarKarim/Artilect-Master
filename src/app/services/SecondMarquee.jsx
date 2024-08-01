@@ -5,7 +5,7 @@ function SecondMarquee() {
   return (
     <>
 <div
-  className="bg-[#232222] text-white flex flex-col justify-center items-center text-center px-4"
+  className="text-[#FF00FF] bg-[#232222] text-white flex flex-col justify-center items-center text-center px-4"
   style={{
     width: "100%",
     height: "70vh",
