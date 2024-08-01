@@ -1,0 +1,46 @@
+{
+  "name": "artilect",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "aos": "^2.3.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.19",
+    "gsap": "^3.12.5",
+    "icons": "^1.0.0",
+    "lenis": "^1.1.6",
+    "lucide-react": "^0.408.0",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.2.1",
+    "react-intersection-observer": "^9.13.0",
+    "react-scroll": "^1.9.0",
+    "react-slick": "^0.30.2",
+    "react-swipeable": "^7.0.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.5",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.34",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8.4.38",
+    "sass": "^1.77.6",
+    "tailwindcss": "^3.4.7"
+  }
+}

@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.header {
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 640px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 20px;
+  }
+}
+
+.heading {
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 640px) {
+    font-size: 30px;
+    margin-left: 40px;
+  }
+}
+
+.form {
+  @media (max-width: 640px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.label {
+  border: 1px solid #ccc;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1vw;
+  line-height: 1.4em;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    font-size: 2vw;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 630px) {
+    font-size: 15px;
+    gap: 4px;
+    width: 90%;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 15px;
+    width: 100%;
+    gap: 4px;
+    padding: 15px 10px;
+  }
+}
+
+.box:hover {
+  background-color: black;
+  color: white;
+}
+
+.heading1 {
+  letter-spacing: -0.05em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 5.78vw;
+  line-height: 1.1em;
+  max-width: 100%;
+  padding: 5rem 80px;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+.para {
+  font-size: 1.4vw;
+}
+
+.title {
+  @media (max-width: 768px) {
+    font-size: large;
+  }
+}
+
+.content {
+  margin-left: 20px;
+}
+
+.section {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.accordion {
+  @media (max-width: 400px) {
+    gap: 3px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 3px;
+    font-size: 13px;
+  }
+}
+
+.boxes {
+  @media (max-width: 430px) {
+    gap: 3px;
+    font-size: 10px;
+  }
+
+  @media (max-width: 640px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #e0ff03;
+  transition: left 0.3s ease;
+  color: black;
+}
+
+.button:hover::before {
+  left: 0;
+}
+
+.button span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.button:hover span {
+  transform: translateX(10px);
+}
+
+.button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.accoriaan {
+  @media (max-width: 1024px) {
+    margin: 30px;
+  }
+}
+
+.boxes {
+  top: 20px;
+  bottom: 30px;
+  row-gap: 10px;
+  column-gap: 10px;
+}

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  cursor: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+}
+/* Add this CSS to your global styles or component styles */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+@font-face {
+  font-family: "Skyhook Mono";
+  src: url("/fonts/FontomTypeSkyhookMono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: suisse;
+  src: url("./../../public/fonts/Suisse\ Intl\ Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.font-skyhook {
+  font-family: "Skyhook Mono";
+}
+.font-suisse {
+  font-family: "Suisse";
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 640px) {
+  .sm\:display-contents {
+    display: contents;
+  }
+}
