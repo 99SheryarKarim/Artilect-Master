@@ -80,6 +80,11 @@ const TestimonialSlider = () => {
 
   const clonedTestimonials = [...testimonials, ...testimonials, ...testimonials];
   const [index, setIndex] = useState(testimonials.length);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handlePrev = () => {
     setIndex((prevIndex) =>
@@ -94,19 +99,6 @@ const TestimonialSlider = () => {
         : prevIndex + 1
     );
   };
-
-  useEffect(() => {
-    const handleResize = () => {
-      // Additional resize handling if necessary
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const variants = {
     enter: {
@@ -132,7 +124,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center space-y-6  py-8 px-4  h-full">
+    <div className="relative flex flex-col items-center space-y-6 py-8 px-4 h-full">
       <div className="overflow-hidden w-full h-96">
         <AnimatePresence initial={false} custom={index}>
           <motion.div
@@ -159,7 +151,7 @@ const TestimonialSlider = () => {
               }
             }}
           >
-            {clonedTestimonials.length > 0 ? (
+            {isClient && clonedTestimonials.length > 0 ? (
               window.innerWidth <= 640
                 ? clonedTestimonials.slice(index, index + 1).map((testimonial, i) => (
                     <TestimonialCard key={i} testimonial={testimonial} />
